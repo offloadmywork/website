@@ -21,45 +21,50 @@ const projects = [
 ];
 ---
 
-<section id="projects" class="relative px-6 py-32">
+<div class="section-divider"></div>
+
+<section id="projects" class="relative px-6 py-24 sm:py-32">
   <div class="mx-auto max-w-5xl">
-    <div class="mb-16 text-center">
-      <h2 class="mb-4 text-3xl font-bold tracking-tight text-text sm:text-4xl">
-        Projects
+    <div class="mb-14 text-center">
+      <p class="mb-3 text-sm font-medium uppercase tracking-widest text-accent">Projects</p>
+      <h2 class="mb-5 text-3xl font-bold tracking-tight text-text sm:text-4xl">
+        What we're building
       </h2>
-      <p class="mx-auto max-w-2xl text-text-muted">
+      <p class="mx-auto max-w-2xl text-text-muted leading-relaxed">
         Open source tools and infrastructure we're building and maintaining.
       </p>
     </div>
 
-    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+    <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
       {projects.map((project) => (
         <a
           href={project.url}
           target="_blank"
           rel="noopener noreferrer"
-          class="group flex flex-col rounded-2xl border border-border bg-bg-card p-6 transition-all hover:border-accent/30 hover:bg-bg-card-hover"
+          class="group flex flex-col rounded-2xl border border-border bg-bg-card p-6 transition-all duration-300 hover:border-accent/30 hover:bg-bg-card-hover hover:-translate-y-0.5"
         >
-          <div class="mb-3 flex items-center gap-2">
-            <svg class="h-4 w-4 text-text-muted" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12.75V12A2.25 2.25 0 014.5 9.75h15A2.25 2.25 0 0121.75 12v.75m-8.69-6.44l-2.12-2.12a1.5 1.5 0 00-1.061-.44H4.5A2.25 2.25 0 002.25 6v12a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18V9a2.25 2.25 0 00-2.25-2.25h-5.379a1.5 1.5 0 01-1.06-.44z"/></svg>
+          <div class="mb-3 flex items-center gap-2.5">
+            <div class="flex h-7 w-7 items-center justify-center rounded-lg bg-accent/10 text-text-muted group-hover:text-accent transition-colors">
+              <svg class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12.75V12A2.25 2.25 0 014.5 9.75h15A2.25 2.25 0 0121.75 12v.75m-8.69-6.44l-2.12-2.12a1.5 1.5 0 00-1.061-.44H4.5A2.25 2.25 0 002.25 6v12a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18V9a2.25 2.25 0 00-2.25-2.25h-5.379a1.5 1.5 0 01-1.06-.44z"/></svg>
+            </div>
             <span class="font-mono text-sm font-medium text-text group-hover:text-accent transition-colors">{project.name}</span>
           </div>
-          <p class="mb-4 flex-1 text-sm leading-relaxed text-text-muted">{project.description}</p>
+          <p class="mb-5 flex-1 text-sm leading-relaxed text-text-muted">{project.description}</p>
           <div class="flex flex-wrap gap-2">
             {project.tags.map((tag) => (
-              <span class="rounded-md bg-accent/10 px-2 py-0.5 font-mono text-xs text-accent">{tag}</span>
+              <span class="rounded-md bg-accent/8 px-2.5 py-1 font-mono text-xs text-accent/80">{tag}</span>
             ))}
           </div>
         </a>
       ))}
     </div>
 
-    <div class="mt-10 text-center">
+    <div class="mt-12 text-center">
       <a
         href="https://github.com/offloadmywork"
         target="_blank"
         rel="noopener noreferrer"
-        class="inline-flex items-center gap-2 text-sm text-text-muted hover:text-accent transition-colors"
+        class="inline-flex items-center gap-2 text-sm font-medium text-text-muted hover:text-accent transition-colors duration-300"
       >
         View all repositories on GitHub
         <svg class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"/></svg>
