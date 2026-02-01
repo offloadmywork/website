@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #0a0a0f;
+  --color-bg-card: #12121a;
+  --color-bg-card-hover: #1a1a26;
+  --color-border: #1e1e2e;
+  --color-text: #e4e4ef;
+  --color-text-muted: #8888a0;
+  --color-accent: #7c5cfc;
+  --color-accent-light: #9b82fc;
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", "Fira Code", monospace;
+}
