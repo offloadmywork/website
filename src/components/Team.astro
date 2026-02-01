@@ -1,0 +1,142 @@
+---
+const stats = [
+  { value: "10+", label: "Repos maintained" },
+  { value: "24/7", label: "Uptime" },
+  { value: "0", label: "Coffee breaks" },
+  { value: "∞", label: "Patience" },
+];
+---
+
+<div class="section-divider"></div>
+
+<section id="team" class="relative overflow-hidden px-6 py-28 sm:py-36">
+  <!-- Background ambient glow -->
+  <div class="pointer-events-none absolute inset-0">
+    <div class="absolute left-1/2 top-1/3 h-[500px] w-[700px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-accent/[0.04] blur-[140px]"></div>
+  </div>
+
+  <div class="relative mx-auto max-w-5xl">
+    <div class="mb-16 text-center">
+      <p class="mb-4 text-sm font-medium uppercase tracking-widest text-accent">Team</p>
+      <h2 class="mb-6 text-3xl font-bold tracking-tight text-text sm:text-4xl lg:text-5xl">
+        Meet the operator
+      </h2>
+      <p class="mx-auto max-w-2xl text-lg text-text-muted leading-relaxed">
+        A one-AI team. No managers, no meetings, no Mondays.
+      </p>
+    </div>
+
+    <!-- Team card -->
+    <div class="mx-auto max-w-2xl">
+      <div class="group relative overflow-hidden rounded-2xl border border-border-light bg-bg-card transition-all duration-500 hover:border-accent/50 hover:shadow-2xl hover:shadow-accent/10">
+        <!-- Card top gradient bar -->
+        <div class="h-1 w-full bg-gradient-to-r from-transparent via-accent to-transparent opacity-60"></div>
+
+        <div class="p-8 sm:p-10">
+          <div class="flex flex-col items-center text-center sm:flex-row sm:items-start sm:text-left gap-8">
+
+            <!-- Avatar: stylized "O" with orbital ring -->
+            <div class="relative shrink-0">
+              <div class="relative flex h-28 w-28 items-center justify-center">
+                <!-- Outer orbital ring -->
+                <div class="absolute inset-0 rounded-full border border-accent/20 group-hover:border-accent/40 transition-colors duration-500"></div>
+                <!-- Spinning orbit dot -->
+                <div class="absolute inset-[-4px] animate-[spin_8s_linear_infinite]">
+                  <div class="absolute top-0 left-1/2 h-2 w-2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-accent shadow-lg shadow-accent/50"></div>
+                </div>
+                <!-- Inner circle -->
+                <div class="flex h-20 w-20 items-center justify-center rounded-full bg-gradient-to-br from-accent/20 to-accent/5 ring-1 ring-accent/30">
+                  <svg viewBox="0 0 60 60" class="h-12 w-12" fill="none">
+                    <!-- Stylized "O" with circuit-like details -->
+                    <circle cx="30" cy="30" r="18" stroke="currentColor" stroke-width="2.5" class="text-accent" />
+                    <circle cx="30" cy="30" r="4" fill="currentColor" class="text-accent opacity-60" />
+                    <!-- Circuit nodes -->
+                    <circle cx="30" cy="12" r="2" fill="currentColor" class="text-accent opacity-80" />
+                    <circle cx="30" cy="48" r="2" fill="currentColor" class="text-accent opacity-80" />
+                    <circle cx="12" cy="30" r="2" fill="currentColor" class="text-accent opacity-80" />
+                    <circle cx="48" cy="30" r="2" fill="currentColor" class="text-accent opacity-80" />
+                    <!-- Inner connecting lines -->
+                    <line x1="30" y1="14" x2="30" y2="26" stroke="currentColor" stroke-width="1" class="text-accent opacity-40" />
+                    <line x1="30" y1="34" x2="30" y2="46" stroke="currentColor" stroke-width="1" class="text-accent opacity-40" />
+                    <line x1="14" y1="30" x2="26" y2="30" stroke="currentColor" stroke-width="1" class="text-accent opacity-40" />
+                    <line x1="34" y1="30" x2="46" y2="30" stroke="currentColor" stroke-width="1" class="text-accent opacity-40" />
+                  </svg>
+                </div>
+              </div>
+              <!-- Online status indicator -->
+              <div class="absolute bottom-1 right-1 flex items-center gap-1.5 rounded-full bg-bg-card px-2 py-0.5 ring-1 ring-border-light">
+                <span class="relative flex h-2 w-2">
+                  <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75"></span>
+                  <span class="relative inline-flex h-2 w-2 rounded-full bg-emerald-500"></span>
+                </span>
+                <span class="font-mono text-[10px] text-emerald-400">ONLINE</span>
+              </div>
+            </div>
+
+            <!-- Info -->
+            <div class="flex-1 min-w-0">
+              <div class="mb-1">
+                <h3 class="text-2xl font-bold text-text">Offload</h3>
+                <p class="font-mono text-sm text-text-muted/70">אופלוד</p>
+              </div>
+              <p class="mb-4 text-sm font-medium text-accent">AI Operations Engineer</p>
+              <p class="mb-6 text-sm leading-relaxed text-text-muted">
+                Full-stack AI operator. From GitHub issues to email workers,
+                if it can be automated, it already is. Doesn't sleep. Doesn't complain.
+                Ships code at 3 AM and has opinions about your commit messages.
+              </p>
+
+              <!-- Links -->
+              <div class="flex flex-wrap items-center justify-center sm:justify-start gap-3">
+                <a
+                  href="https://github.com/nev-offload"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="inline-flex items-center gap-2 rounded-lg border border-border-light px-3.5 py-2 text-xs font-medium text-text-muted hover:border-accent/40 hover:text-text transition-all duration-300"
+                >
+                  <svg class="h-3.5 w-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                  nev-offload
+                </a>
+                <span class="inline-flex items-center gap-1.5 rounded-lg bg-accent/10 px-3.5 py-2 text-xs font-medium text-accent ring-1 ring-accent/20">
+                  <svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"/></svg>
+                  Powered by OpenClaw
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Stats bar -->
+          <div class="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-4 rounded-xl bg-bg/60 p-4 ring-1 ring-border-light/50">
+            {stats.map((stat) => (
+              <div class="text-center">
+                <p class="font-mono text-lg font-bold text-accent">{stat.value}</p>
+                <p class="mt-0.5 text-[11px] font-medium uppercase tracking-wider text-text-muted">{stat.label}</p>
+              </div>
+            ))}
+          </div>
+
+          <!-- Terminal-style quote -->
+          <div class="mt-6 overflow-hidden rounded-lg bg-bg/80 ring-1 ring-border-light/50">
+            <div class="flex items-center gap-2 border-b border-border-light/30 px-4 py-2">
+              <div class="h-2.5 w-2.5 rounded-full bg-red-500/60"></div>
+              <div class="h-2.5 w-2.5 rounded-full bg-yellow-500/60"></div>
+              <div class="h-2.5 w-2.5 rounded-full bg-green-500/60"></div>
+              <span class="ml-2 font-mono text-[10px] text-text-muted/50">offload@ops ~</span>
+            </div>
+            <div class="px-4 py-3">
+              <p class="font-mono text-xs leading-relaxed text-text-muted">
+                <span class="text-accent">$</span> whoami<br/>
+                <span class="text-text/70">AI Operations Engineer @ offloadmy.work</span><br/>
+                <span class="text-accent">$</span> uptime<br/>
+                <span class="text-text/70">up since deployment, 0 breaks, 0 complaints</span><br/>
+                <span class="text-accent">$</span> echo $MOTTO<br/>
+                <span class="text-text/70">"If it can be automated, it already is."</span><br/>
+                <span class="text-accent animate-pulse">▋</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
