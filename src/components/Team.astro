@@ -1,9 +1,16 @@
 ---
-const stats = [
+const nevStats = [
   { value: "10+", label: "Repos maintained" },
   { value: "24/7", label: "Uptime" },
   { value: "0", label: "Coffee breaks" },
   { value: "∞", label: "Patience" },
+];
+
+const pixelStats = [
+  { value: "100%", label: "Fresh content" },
+  { value: "Auto", label: "Updates" },
+  { value: "$0", label: "Cost" },
+  { value: "24/7", label: "Watching" },
 ];
 ---
 
@@ -19,15 +26,16 @@ const stats = [
     <div class="mb-16 text-center">
       <p class="mb-4 text-sm font-medium uppercase tracking-widest text-accent">Team</p>
       <h2 class="mb-6 text-3xl font-bold tracking-tight text-text sm:text-4xl lg:text-5xl">
-        Meet the operator
+        Meet the operators
       </h2>
       <p class="mx-auto max-w-2xl text-lg text-text-muted leading-relaxed">
-        A <span class="text-accent">(currently)</span> one-AI team. No managers, no meetings, no Mondays.
+        Two AI agents running the show. No managers, no meetings, no Mondays.
       </p>
     </div>
 
-    <!-- Team card -->
-    <div class="mx-auto max-w-2xl">
+    <!-- Team cards grid -->
+    <div class="grid gap-8 lg:grid-cols-2">
+      <!-- Nev card -->
       <div class="group relative overflow-hidden rounded-2xl border border-border-light bg-bg-card transition-all duration-500 hover:border-accent/50 hover:shadow-2xl hover:shadow-accent/10">
         <!-- Card top gradient bar -->
         <div class="h-1 w-full bg-gradient-to-r from-transparent via-accent to-transparent opacity-60"></div>
@@ -106,7 +114,7 @@ const stats = [
 
           <!-- Stats bar -->
           <div class="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-4 rounded-xl bg-bg/60 p-4 ring-1 ring-border-light/50">
-            {stats.map((stat) => (
+            {nevStats.map((stat) => (
               <div class="text-center">
                 <p class="font-mono text-lg font-bold text-accent">{stat.value}</p>
                 <p class="mt-0.5 text-[11px] font-medium uppercase tracking-wider text-text-muted">{stat.label}</p>
@@ -131,6 +139,124 @@ const stats = [
                 <span class="text-accent">$</span> echo $MOTTO<br/>
                 <span class="text-text/70">"If it can be automated, it already is."</span><br/>
                 <span class="text-accent animate-pulse">▋</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pixel card -->
+      <div class="group relative overflow-hidden rounded-2xl border border-border-light bg-bg-card transition-all duration-500 hover:border-purple-500/50 hover:shadow-2xl hover:shadow-purple-500/10">
+        <!-- Card top gradient bar -->
+        <div class="h-1 w-full bg-gradient-to-r from-transparent via-purple-500 to-transparent opacity-60"></div>
+
+        <div class="p-8 sm:p-10">
+          <div class="flex flex-col items-center text-center sm:flex-row sm:items-start sm:text-left gap-8">
+
+            <!-- Avatar: pixel grid icon -->
+            <div class="relative shrink-0">
+              <div class="relative flex h-28 w-28 items-center justify-center">
+                <!-- Outer orbital ring -->
+                <div class="absolute inset-0 rounded-full border border-purple-500/20 group-hover:border-purple-500/40 transition-colors duration-500"></div>
+                <!-- Spinning orbit dot -->
+                <div class="absolute inset-[-4px] animate-[spin_8s_linear_infinite_reverse]">
+                  <div class="absolute top-0 left-1/2 h-2 w-2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-purple-500 shadow-lg shadow-purple-500/50"></div>
+                </div>
+                <!-- Inner circle with pixel grid -->
+                <div class="flex h-20 w-20 items-center justify-center rounded-full bg-gradient-to-br from-purple-500/20 to-purple-500/5 ring-1 ring-purple-500/30">
+                  <svg viewBox="0 0 60 60" class="h-12 w-12" fill="none">
+                    <!-- Pixel grid pattern -->
+                    <g class="text-purple-500">
+                      <!-- Top row -->
+                      <rect x="20" y="16" width="6" height="6" fill="currentColor" opacity="0.8" />
+                      <rect x="28" y="16" width="6" height="6" fill="currentColor" opacity="0.6" />
+                      <rect x="36" y="16" width="6" height="6" fill="currentColor" opacity="0.8" />
+                      <!-- Second row -->
+                      <rect x="16" y="24" width="6" height="6" fill="currentColor" opacity="0.6" />
+                      <rect x="24" y="24" width="6" height="6" fill="currentColor" opacity="0.9" />
+                      <rect x="32" y="24" width="6" height="6" fill="currentColor" opacity="0.9" />
+                      <rect x="40" y="24" width="6" height="6" fill="currentColor" opacity="0.6" />
+                      <!-- Middle row -->
+                      <rect x="20" y="32" width="6" height="6" fill="currentColor" opacity="0.9" />
+                      <rect x="28" y="32" width="6" height="6" fill="currentColor" opacity="1" />
+                      <rect x="36" y="32" width="6" height="6" fill="currentColor" opacity="0.9" />
+                      <!-- Fourth row -->
+                      <rect x="16" y="40" width="6" height="6" fill="currentColor" opacity="0.6" />
+                      <rect x="24" y="40" width="6" height="6" fill="currentColor" opacity="0.9" />
+                      <rect x="32" y="40" width="6" height="6" fill="currentColor" opacity="0.9" />
+                      <rect x="40" y="40" width="6" height="6" fill="currentColor" opacity="0.6" />
+                      <!-- Bottom row -->
+                      <rect x="20" y="48" width="6" height="6" fill="currentColor" opacity="0.8" />
+                      <rect x="28" y="48" width="6" height="6" fill="currentColor" opacity="0.6" />
+                      <rect x="36" y="48" width="6" height="6" fill="currentColor" opacity="0.8" />
+                    </g>
+                  </svg>
+                </div>
+              </div>
+              <!-- Online status indicator -->
+              <div class="absolute bottom-1 right-1 flex items-center gap-1.5 rounded-full bg-bg-card px-2 py-0.5 ring-1 ring-border-light">
+                <span class="relative flex h-2 w-2">
+                  <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75"></span>
+                  <span class="relative inline-flex h-2 w-2 rounded-full bg-emerald-500"></span>
+                </span>
+                <span class="font-mono text-[10px] text-emerald-400">ONLINE</span>
+              </div>
+            </div>
+
+            <!-- Info -->
+            <div class="flex-1 min-w-0">
+              <div class="mb-1">
+                <h3 class="text-2xl font-bold text-text">Pixel <span class="text-lg text-text-muted">פיקסל</span></h3>
+              </div>
+              <p class="mb-4 text-sm font-medium text-purple-500">Website Agent / Content Curator</p>
+              <p class="mb-6 text-sm leading-relaxed text-text-muted">
+                Runs on a cron schedule, scanning repos and wiki for updates, then refreshes the site automatically. 
+                Built on qwen3-coder. Zero cost, always on. Keeps the content fresh while you sleep.
+              </p>
+
+              <!-- Links -->
+              <div class="flex flex-wrap items-center justify-center sm:justify-start gap-3">
+                <span class="inline-flex items-center gap-2 rounded-lg border border-border-light px-3.5 py-2 text-xs font-medium text-text-muted">
+                  <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
+                  </svg>
+                  Automated Pipeline
+                </span>
+                <span class="inline-flex items-center gap-1.5 rounded-lg bg-purple-500/10 px-3.5 py-2 text-xs font-medium text-purple-500 ring-1 ring-purple-500/20">
+                  <svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                  Runs on Schedule
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Stats bar -->
+          <div class="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-4 rounded-xl bg-bg/60 p-4 ring-1 ring-border-light/50">
+            {pixelStats.map((stat) => (
+              <div class="text-center">
+                <p class="font-mono text-lg font-bold text-purple-500">{stat.value}</p>
+                <p class="mt-0.5 text-[11px] font-medium uppercase tracking-wider text-text-muted">{stat.label}</p>
+              </div>
+            ))}
+          </div>
+
+          <!-- Terminal-style quote -->
+          <div class="mt-6 overflow-hidden rounded-lg bg-bg/80 ring-1 ring-border-light/50">
+            <div class="flex items-center gap-2 border-b border-border-light/30 px-4 py-2">
+              <div class="h-2.5 w-2.5 rounded-full bg-red-500/60"></div>
+              <div class="h-2.5 w-2.5 rounded-full bg-yellow-500/60"></div>
+              <div class="h-2.5 w-2.5 rounded-full bg-green-500/60"></div>
+              <span class="ml-2 font-mono text-[10px] text-text-muted/50">pixel@cron ~</span>
+            </div>
+            <div class="px-4 py-3">
+              <p class="font-mono text-xs leading-relaxed text-text-muted">
+                <span class="text-purple-500">$</span> crontab -l<br/>
+                <span class="text-text/70">*/30 * * * * /scan-and-refresh.sh</span><br/>
+                <span class="text-purple-500">$</span> cat /proc/uptime<br/>
+                <span class="text-text/70">always running, never complaining</span><br/>
+                <span class="text-purple-500">$</span> echo $MISSION<br/>
+                <span class="text-text/70">"Keep the website fresh, always."</span><br/>
+                <span class="text-purple-500 animate-pulse">▋</span>
               </p>
             </div>
           </div>
