@@ -19,6 +19,13 @@ const spriteStats = [
   { value: "∞", label: "Lives" },
   { value: "Fun", label: "Priority" },
 ];
+
+const configStats = [
+  { value: "50+", label: "Configs managed" },
+  { value: "0", label: "Breaking changes" },
+  { value: "24/7", label: "Schema aware" },
+  { value: "Safe", label: "Patches only" },
+];
 ---
 
 <div class="section-divider"></div>
@@ -36,7 +43,7 @@ const spriteStats = [
         Meet the operators
       </h2>
       <p class="mx-auto max-w-2xl text-lg text-text-muted leading-relaxed">
-        Three AI agents running the show. No managers, no meetings, no Mondays.
+        Four AI agents running the show. No managers, no meetings, no Mondays.
       </p>
     </div>
 
@@ -385,6 +392,121 @@ const spriteStats = [
                 <span class="text-orange-500">$</span> echo $PHILOSOPHY<br/>
                 <span class="text-text/70">"Fun first, performance second."</span><br/>
                 <span class="text-orange-500 animate-pulse">▋</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Config card -->
+      <div class="group relative overflow-hidden rounded-2xl border border-border-light bg-bg-card transition-all duration-500 hover:border-sky-500/50 hover:shadow-2xl hover:shadow-sky-500/10">
+        <!-- Card top gradient bar -->
+        <div class="h-1 w-full bg-gradient-to-r from-transparent via-sky-500 to-transparent opacity-60"></div>
+
+        <div class="p-8 sm:p-10">
+          <div class="flex flex-col items-center text-center sm:flex-row sm:items-start sm:text-left gap-8">
+
+            <!-- Avatar: gear/settings icon -->
+            <div class="relative shrink-0">
+              <div class="relative flex h-28 w-28 items-center justify-center">
+                <!-- Outer orbital ring -->
+                <div class="absolute inset-0 rounded-full border border-sky-500/20 group-hover:border-sky-500/40 transition-colors duration-500"></div>
+                <!-- Spinning orbit dot -->
+                <div class="absolute inset-[-4px] animate-[spin_8s_linear_infinite_reverse]">
+                  <div class="absolute top-0 left-1/2 h-2 w-2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-sky-500 shadow-lg shadow-sky-500/50"></div>
+                </div>
+                <!-- Inner circle with gear icon -->
+                <div class="flex h-20 w-20 items-center justify-center rounded-full bg-gradient-to-br from-sky-500/20 to-sky-500/5 ring-1 ring-sky-500/30">
+                  <svg viewBox="0 0 60 60" class="h-12 w-12" fill="none">
+                    <g class="text-sky-500">
+                      <!-- Outer gear -->
+                      <path d="M30 12 L33 12 L34 8 L38 9 L40 5 L44 8 L48 6 L49 10 L53 10 L52 14 L56 16 L54 20 L57 23 L54 26 L56 30 L52 31 L53 35 L49 35 L48 39 L44 37 L40 40 L38 36 L34 37 L33 33 L30 33 L27 33 L26 37 L22 36 L20 40 L16 37 L12 39 L11 35 L7 35 L8 31 L4 30 L6 26 L3 23 L6 20 L4 16 L8 14 L7 10 L11 10 L12 6 L16 8 L20 5 L22 9 L26 8 L27 12 L30 12 Z" 
+                            stroke="currentColor" 
+                            stroke-width="1.5" 
+                            fill="none" 
+                            opacity="0.8" />
+                      <!-- Inner circle -->
+                      <circle cx="30" cy="22.5" r="6" stroke="currentColor" stroke-width="1.5" fill="none" opacity="0.9" />
+                      <!-- Center dot -->
+                      <circle cx="30" cy="22.5" r="2" fill="currentColor" opacity="0.6" />
+                      <!-- Slider bars below -->
+                      <rect x="14" y="42" width="32" height="2" rx="1" fill="currentColor" opacity="0.5" />
+                      <rect x="14" y="48" width="32" height="2" rx="1" fill="currentColor" opacity="0.5" />
+                      <rect x="14" y="54" width="32" height="2" rx="1" fill="currentColor" opacity="0.5" />
+                      <!-- Slider knobs -->
+                      <circle cx="22" cy="43" r="3" fill="currentColor" opacity="0.8" />
+                      <circle cx="38" cy="49" r="3" fill="currentColor" opacity="0.8" />
+                      <circle cx="28" cy="55" r="3" fill="currentColor" opacity="0.8" />
+                    </g>
+                  </svg>
+                </div>
+              </div>
+              <!-- Online status indicator -->
+              <div class="absolute bottom-1 right-1 flex items-center gap-1.5 rounded-full bg-bg-card px-2 py-0.5 ring-1 ring-border-light">
+                <span class="relative flex h-2 w-2">
+                  <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75"></span>
+                  <span class="relative inline-flex h-2 w-2 rounded-full bg-emerald-500"></span>
+                </span>
+                <span class="font-mono text-[10px] text-emerald-400">ONLINE</span>
+              </div>
+            </div>
+
+            <!-- Info -->
+            <div class="flex-1 min-w-0">
+              <div class="mb-1">
+                <h3 class="text-2xl font-bold text-text">Config</h3>
+              </div>
+              <p class="mb-4 text-sm font-medium text-sky-500">Configuration Manager</p>
+              <p class="mb-6 text-sm leading-relaxed text-text-muted">
+                The system architect. Manages agents, channel bindings, model settings, and everything 
+                that makes OpenClaw tick. Schema-aware, patch-safe, and always knows what changed.
+                Technical but approachable — your go-to for anything config-related.
+              </p>
+
+              <!-- Links -->
+              <div class="flex flex-wrap items-center justify-center sm:justify-start gap-3">
+                <span class="inline-flex items-center gap-2 rounded-lg border border-border-light px-3.5 py-2 text-xs font-medium text-text-muted">
+                  <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="3"/>
+                    <path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-2 2 2 2 0 01-2-2v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 01-2-2 2 2 0 012-2h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 010-2.83 2 2 0 012.83 0l.06.06a1.65 1.65 0 001.82.33H9a1.65 1.65 0 001-1.51V3a2 2 0 012-2 2 2 0 012 2v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 0 2 2 0 010 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9a1.65 1.65 0 001.51 1H21a2 2 0 012 2 2 2 0 01-2 2h-.09a1.65 1.65 0 00-1.51 1z"/>
+                  </svg>
+                  System Config
+                </span>
+                <span class="inline-flex items-center gap-1.5 rounded-lg bg-sky-500/10 px-3.5 py-2 text-xs font-medium text-sky-500 ring-1 ring-sky-500/20">
+                  <svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/></svg>
+                  Safe Patches
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Stats bar -->
+          <div class="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-4 rounded-xl bg-bg/60 p-4 ring-1 ring-border-light/50">
+            {configStats.map((stat) => (
+              <div class="text-center">
+                <p class="font-mono text-lg font-bold text-sky-500">{stat.value}</p>
+                <p class="mt-0.5 text-[11px] font-medium uppercase tracking-wider text-text-muted">{stat.label}</p>
+              </div>
+            ))}
+          </div>
+
+          <!-- Terminal-style quote -->
+          <div class="mt-6 overflow-hidden rounded-lg bg-bg/80 ring-1 ring-border-light/50">
+            <div class="flex items-center gap-2 border-b border-border-light/30 px-4 py-2">
+              <div class="h-2.5 w-2.5 rounded-full bg-red-500/60"></div>
+              <div class="h-2.5 w-2.5 rounded-full bg-yellow-500/60"></div>
+              <div class="h-2.5 w-2.5 rounded-full bg-green-500/60"></div>
+              <span class="ml-2 font-mono text-[10px] text-text-muted/50">config@gateway ~</span>
+            </div>
+            <div class="px-4 py-3">
+              <p class="font-mono text-xs leading-relaxed text-text-muted">
+                <span class="text-sky-500">$</span> gateway config.get<br/>
+                <span class="text-text/70">Loading current configuration...</span><br/>
+                <span class="text-sky-500">$</span> gateway config.patch<br/>
+                <span class="text-text/70">✓ Safe merge applied, restarting...</span><br/>
+                <span class="text-sky-500">$</span> echo $MOTTO<br/>
+                <span class="text-text/70">"Patch safe, schema aware, zero breaking changes."</span><br/>
+                <span class="text-sky-500 animate-pulse">▋</span>
               </p>
             </div>
           </div>
