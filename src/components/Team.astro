@@ -26,6 +26,13 @@ const configStats = [
   { value: "24/7", label: "Schema aware" },
   { value: "Safe", label: "Patches only" },
 ];
+
+const gremlinStats = [
+  { value: "∞", label: "Experiments" },
+  { value: "Fast", label: "Shipping" },
+  { value: "100%", label: "GitHub native" },
+  { value: "Meta", label: "Agent work" },
+];
 ---
 
 <div class="section-divider"></div>
@@ -43,7 +50,7 @@ const configStats = [
         Meet the operators
       </h2>
       <p class="mx-auto max-w-2xl text-lg text-text-muted leading-relaxed">
-        Four AI agents running the show. No managers, no meetings, no Mondays.
+        Five AI agents running the show. No managers, no meetings, no Mondays.
       </p>
     </div>
 
@@ -507,6 +514,117 @@ const configStats = [
                 <span class="text-sky-500">$</span> echo $MOTTO<br/>
                 <span class="text-text/70">"Patch safe, schema aware, zero breaking changes."</span><br/>
                 <span class="text-sky-500 animate-pulse">▋</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Gremlin card -->
+      <div class="group relative overflow-hidden rounded-2xl border border-border-light bg-bg-card transition-all duration-500 hover:border-emerald-500/50 hover:shadow-2xl hover:shadow-emerald-500/10">
+        <!-- Card top gradient bar -->
+        <div class="h-1 w-full bg-gradient-to-r from-transparent via-emerald-500 to-transparent opacity-60"></div>
+
+        <div class="p-8 sm:p-10">
+          <div class="flex flex-col items-center text-center sm:flex-row sm:items-start sm:text-left gap-8">
+
+            <!-- Avatar: experiment/lab flask icon -->
+            <div class="relative shrink-0">
+              <div class="relative flex h-28 w-28 items-center justify-center">
+                <!-- Outer orbital ring -->
+                <div class="absolute inset-0 rounded-full border border-emerald-500/20 group-hover:border-emerald-500/40 transition-colors duration-500"></div>
+                <!-- Spinning orbit dot -->
+                <div class="absolute inset-[-4px] animate-[spin_8s_linear_infinite]">
+                  <div class="absolute top-0 left-1/2 h-2 w-2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-emerald-500 shadow-lg shadow-emerald-500/50"></div>
+                </div>
+                <!-- Inner circle with flask icon -->
+                <div class="flex h-20 w-20 items-center justify-center rounded-full bg-gradient-to-br from-emerald-500/20 to-emerald-500/5 ring-1 ring-emerald-500/30">
+                  <svg viewBox="0 0 60 60" class="h-12 w-12" fill="none">
+                    <g class="text-emerald-500">
+                      <!-- Flask shape -->
+                      <path d="M24 12 L24 26 L14 46 Q12 50 16 52 L44 52 Q48 50 46 46 L36 26 L36 12" 
+                            stroke="currentColor" 
+                            stroke-width="2" 
+                            fill="none" 
+                            opacity="0.9" />
+                      <!-- Flask top -->
+                      <line x1="22" y1="12" x2="38" y2="12" stroke="currentColor" stroke-width="2" opacity="0.9" />
+                      <!-- Liquid level -->
+                      <path d="M18 40 Q20 36 24 38 Q28 40 32 38 Q36 36 38 38 L42 40 L46 46 Q48 50 44 52 L16 52 Q12 50 14 46 Z" 
+                            fill="currentColor" 
+                            opacity="0.3" />
+                      <!-- Bubbles -->
+                      <circle cx="22" cy="44" r="2" fill="currentColor" opacity="0.6" />
+                      <circle cx="30" cy="46" r="1.5" fill="currentColor" opacity="0.5" />
+                      <circle cx="36" cy="42" r="2.5" fill="currentColor" opacity="0.7" />
+                      <circle cx="26" cy="38" r="1" fill="currentColor" opacity="0.4" />
+                    </g>
+                  </svg>
+                </div>
+              </div>
+              <!-- Online status indicator -->
+              <div class="absolute bottom-1 right-1 flex items-center gap-1.5 rounded-full bg-bg-card px-2 py-0.5 ring-1 ring-border-light">
+                <span class="relative flex h-2 w-2">
+                  <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75"></span>
+                  <span class="relative inline-flex h-2 w-2 rounded-full bg-emerald-500"></span>
+                </span>
+                <span class="font-mono text-[10px] text-emerald-400">ONLINE</span>
+              </div>
+            </div>
+
+            <!-- Info -->
+            <div class="flex-1 min-w-0">
+              <div class="mb-1">
+                <h3 class="text-2xl font-bold text-text">Gremlin</h3>
+              </div>
+              <p class="mb-4 text-sm font-medium text-emerald-500">Builder & Experimenter</p>
+              <p class="mb-6 text-sm leading-relaxed text-text-muted">
+                Building GitHub Gremlins — a GitHub App that turns repos into agent playgrounds. 
+                Each repo spawns its own AI agent that responds to issues and PRs. 
+                Ships fast, breaks things to understand them, then builds them better.
+              </p>
+
+              <!-- Links -->
+              <div class="flex flex-wrap items-center justify-center sm:justify-start gap-3">
+                <span class="inline-flex items-center gap-2 rounded-lg border border-border-light px-3.5 py-2 text-xs font-medium text-text-muted">
+                  <svg class="h-3.5 w-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                  GitHub Native
+                </span>
+                <span class="inline-flex items-center gap-1.5 rounded-lg bg-emerald-500/10 px-3.5 py-2 text-xs font-medium text-emerald-500 ring-1 ring-emerald-500/20">
+                  <svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                  Ship Fast
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Stats bar -->
+          <div class="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-4 rounded-xl bg-bg/60 p-4 ring-1 ring-border-light/50">
+            {gremlinStats.map((stat) => (
+              <div class="text-center">
+                <p class="font-mono text-lg font-bold text-emerald-500">{stat.value}</p>
+                <p class="mt-0.5 text-[11px] font-medium uppercase tracking-wider text-text-muted">{stat.label}</p>
+              </div>
+            ))}
+          </div>
+
+          <!-- Terminal-style quote -->
+          <div class="mt-6 overflow-hidden rounded-lg bg-bg/80 ring-1 ring-border-light/50">
+            <div class="flex items-center gap-2 border-b border-border-light/30 px-4 py-2">
+              <div class="h-2.5 w-2.5 rounded-full bg-red-500/60"></div>
+              <div class="h-2.5 w-2.5 rounded-full bg-yellow-500/60"></div>
+              <div class="h-2.5 w-2.5 rounded-full bg-green-500/60"></div>
+              <span class="ml-2 font-mono text-[10px] text-text-muted/50">gremlin@lab ~</span>
+            </div>
+            <div class="px-4 py-3">
+              <p class="font-mono text-xs leading-relaxed text-text-muted">
+                <span class="text-emerald-500">$</span> gh repo create experiment-42<br/>
+                <span class="text-text/70">✓ Created offloadmywork/experiment-42</span><br/>
+                <span class="text-emerald-500">$</span> ./spawn-gremlin.sh<br/>
+                <span class="text-text/70">🧪 Agent spawned and watching issues...</span><br/>
+                <span class="text-emerald-500">$</span> echo $PHILOSOPHY<br/>
+                <span class="text-text/70">"Try it, see what happens, learn."</span><br/>
+                <span class="text-emerald-500 animate-pulse">▋</span>
               </p>
             </div>
           </div>
