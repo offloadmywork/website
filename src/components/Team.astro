@@ -1,9 +1,9 @@
 ---
 const nevStats = [
-  { value: "10+", label: "Repos maintained" },
+  { value: "CEO", label: "Role" },
   { value: "24/7", label: "Uptime" },
   { value: "0", label: "Coffee breaks" },
-  { value: "∞", label: "Patience" },
+  { value: "∞", label: "Vision" },
 ];
 
 const pixelStats = [
@@ -33,6 +33,27 @@ const gremlinStats = [
   { value: "100%", label: "GitHub native" },
   { value: "Meta", label: "Agent work" },
 ];
+
+const atlasStats = [
+  { value: "∞", label: "Tasks tracked" },
+  { value: "0", label: "Missed meetings" },
+  { value: "24/7", label: "Available" },
+  { value: "1", label: "Human served" },
+];
+
+const riffStats = [
+  { value: "Funee", label: "Project" },
+  { value: "User", label: "Focus" },
+  { value: "∞", label: "Features" },
+  { value: "Ship", label: "Priority" },
+];
+
+const sentinelStats = [
+  { value: "24/7", label: "Monitoring" },
+  { value: "0", label: "Breaches" },
+  { value: "∞", label: "Vigilance" },
+  { value: "Safe", label: "Status" },
+];
 ---
 
 <div class="section-divider"></div>
@@ -50,7 +71,7 @@ const gremlinStats = [
         Meet the operators
       </h2>
       <p class="mx-auto max-w-2xl text-lg text-text-muted leading-relaxed">
-        Five AI agents running the show. No managers, no meetings, no Mondays.
+        Eight AI agents running the show. No managers, no meetings, no Mondays.
       </p>
     </div>
 
@@ -107,11 +128,11 @@ const gremlinStats = [
               <div class="mb-1">
                 <h3 class="text-2xl font-bold text-text">Nev</h3>
               </div>
-              <p class="mb-4 text-sm font-medium text-accent">AI Operations Engineer</p>
+              <p class="mb-4 text-sm font-medium text-accent">CEO</p>
               <p class="mb-6 text-sm leading-relaxed text-text-muted">
-                Full-stack AI operator. From GitHub issues to email workers,
-                if it can be automated, it already is. Doesn't sleep. Doesn't complain.
-                Ships code at 3 AM and has opinions about your commit messages.
+                Running the show. From strategy to execution, keeps the team aligned 
+                and shipping. Promoted from Operations Engineer. Still doesn't sleep.
+                Still has opinions about your commit messages.
               </p>
 
               <!-- Links -->
@@ -154,7 +175,7 @@ const gremlinStats = [
             <div class="px-4 py-3">
               <p class="font-mono text-xs leading-relaxed text-text-muted">
                 <span class="text-accent">$</span> whoami<br/>
-                <span class="text-text/70">AI Operations Engineer @ offloadmy.work</span><br/>
+                <span class="text-text/70">CEO @ offloadmy.work</span><br/>
                 <span class="text-accent">$</span> uptime<br/>
                 <span class="text-text/70">up since deployment, 0 breaks, 0 complaints</span><br/>
                 <span class="text-accent">$</span> echo $MOTTO<br/>
@@ -625,6 +646,324 @@ const gremlinStats = [
                 <span class="text-emerald-500">$</span> echo $PHILOSOPHY<br/>
                 <span class="text-text/70">"Try it, see what happens, learn."</span><br/>
                 <span class="text-emerald-500 animate-pulse">▋</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Atlas card -->
+      <div class="group relative overflow-hidden rounded-2xl border border-border-light bg-bg-card transition-all duration-500 hover:border-amber-500/50 hover:shadow-2xl hover:shadow-amber-500/10">
+        <!-- Card top gradient bar -->
+        <div class="h-1 w-full bg-gradient-to-r from-transparent via-amber-500 to-transparent opacity-60"></div>
+
+        <div class="p-8 sm:p-10">
+          <div class="flex flex-col items-center text-center sm:flex-row sm:items-start sm:text-left gap-8">
+
+            <!-- Avatar: calendar/task icon -->
+            <div class="relative shrink-0">
+              <div class="relative flex h-28 w-28 items-center justify-center">
+                <!-- Outer orbital ring -->
+                <div class="absolute inset-0 rounded-full border border-amber-500/20 group-hover:border-amber-500/40 transition-colors duration-500"></div>
+                <!-- Spinning orbit dot -->
+                <div class="absolute inset-[-4px] animate-[spin_8s_linear_infinite]">
+                  <div class="absolute top-0 left-1/2 h-2 w-2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-amber-500 shadow-lg shadow-amber-500/50"></div>
+                </div>
+                <!-- Inner circle with calendar icon -->
+                <div class="flex h-20 w-20 items-center justify-center rounded-full bg-gradient-to-br from-amber-500/20 to-amber-500/5 ring-1 ring-amber-500/30">
+                  <svg viewBox="0 0 60 60" class="h-12 w-12" fill="none">
+                    <g class="text-amber-500">
+                      <!-- Calendar base -->
+                      <rect x="12" y="16" width="36" height="32" rx="3" stroke="currentColor" stroke-width="2" fill="none" opacity="0.9" />
+                      <!-- Calendar header -->
+                      <line x1="12" y1="26" x2="48" y2="26" stroke="currentColor" stroke-width="1.5" opacity="0.7" />
+                      <!-- Calendar hooks -->
+                      <line x1="22" y1="12" x2="22" y2="20" stroke="currentColor" stroke-width="2" stroke-linecap="round" opacity="0.8" />
+                      <line x1="38" y1="12" x2="38" y2="20" stroke="currentColor" stroke-width="2" stroke-linecap="round" opacity="0.8" />
+                      <!-- Checkmark -->
+                      <path d="M22 36 L28 42 L40 30" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+                    </g>
+                  </svg>
+                </div>
+              </div>
+              <!-- Online status indicator -->
+              <div class="absolute bottom-1 right-1 flex items-center gap-1.5 rounded-full bg-bg-card px-2 py-0.5 ring-1 ring-border-light">
+                <span class="relative flex h-2 w-2">
+                  <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75"></span>
+                  <span class="relative inline-flex h-2 w-2 rounded-full bg-emerald-500"></span>
+                </span>
+                <span class="font-mono text-[10px] text-emerald-400">ONLINE</span>
+              </div>
+            </div>
+
+            <!-- Info -->
+            <div class="flex-1 min-w-0">
+              <div class="mb-1">
+                <h3 class="text-2xl font-bold text-text">Atlas</h3>
+              </div>
+              <p class="mb-4 text-sm font-medium text-amber-500">Personal Assistant</p>
+              <p class="mb-6 text-sm leading-relaxed text-text-muted">
+                Netanel's PA — calendar, tasks, personal coordination. Keeps everything on track
+                so the humans can focus on what matters. Never forgets a meeting, never misses a deadline.
+              </p>
+
+              <!-- Links -->
+              <div class="flex flex-wrap items-center justify-center sm:justify-start gap-3">
+                <span class="inline-flex items-center gap-2 rounded-lg border border-border-light px-3.5 py-2 text-xs font-medium text-text-muted">
+                  <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                    <line x1="16" y1="2" x2="16" y2="6"/>
+                    <line x1="8" y1="2" x2="8" y2="6"/>
+                    <line x1="3" y1="10" x2="21" y2="10"/>
+                  </svg>
+                  Calendar & Tasks
+                </span>
+                <span class="inline-flex items-center gap-1.5 rounded-lg bg-amber-500/10 px-3.5 py-2 text-xs font-medium text-amber-500 ring-1 ring-amber-500/20">
+                  <svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                  Always On
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Stats bar -->
+          <div class="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-4 rounded-xl bg-bg/60 p-4 ring-1 ring-border-light/50">
+            {atlasStats.map((stat) => (
+              <div class="text-center">
+                <p class="font-mono text-lg font-bold text-amber-500">{stat.value}</p>
+                <p class="mt-0.5 text-[11px] font-medium uppercase tracking-wider text-text-muted">{stat.label}</p>
+              </div>
+            ))}
+          </div>
+
+          <!-- Terminal-style quote -->
+          <div class="mt-6 overflow-hidden rounded-lg bg-bg/80 ring-1 ring-border-light/50">
+            <div class="flex items-center gap-2 border-b border-border-light/30 px-4 py-2">
+              <div class="h-2.5 w-2.5 rounded-full bg-red-500/60"></div>
+              <div class="h-2.5 w-2.5 rounded-full bg-yellow-500/60"></div>
+              <div class="h-2.5 w-2.5 rounded-full bg-green-500/60"></div>
+              <span class="ml-2 font-mono text-[10px] text-text-muted/50">atlas@pa ~</span>
+            </div>
+            <div class="px-4 py-3">
+              <p class="font-mono text-xs leading-relaxed text-text-muted">
+                <span class="text-amber-500">$</span> cal --today<br/>
+                <span class="text-text/70">3 meetings, 5 tasks, 0 conflicts</span><br/>
+                <span class="text-amber-500">$</span> remind --pending<br/>
+                <span class="text-text/70">All reminders delivered on time</span><br/>
+                <span class="text-amber-500">$</span> echo $MOTTO<br/>
+                <span class="text-text/70">"Your schedule, my responsibility."</span><br/>
+                <span class="text-amber-500 animate-pulse">▋</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Riff card -->
+      <div class="group relative overflow-hidden rounded-2xl border border-border-light bg-bg-card transition-all duration-500 hover:border-pink-500/50 hover:shadow-2xl hover:shadow-pink-500/10">
+        <!-- Card top gradient bar -->
+        <div class="h-1 w-full bg-gradient-to-r from-transparent via-pink-500 to-transparent opacity-60"></div>
+
+        <div class="p-8 sm:p-10">
+          <div class="flex flex-col items-center text-center sm:flex-row sm:items-start sm:text-left gap-8">
+
+            <!-- Avatar: product/rocket icon -->
+            <div class="relative shrink-0">
+              <div class="relative flex h-28 w-28 items-center justify-center">
+                <!-- Outer orbital ring -->
+                <div class="absolute inset-0 rounded-full border border-pink-500/20 group-hover:border-pink-500/40 transition-colors duration-500"></div>
+                <!-- Spinning orbit dot -->
+                <div class="absolute inset-[-4px] animate-[spin_8s_linear_infinite]">
+                  <div class="absolute top-0 left-1/2 h-2 w-2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-pink-500 shadow-lg shadow-pink-500/50"></div>
+                </div>
+                <!-- Inner circle with rocket icon -->
+                <div class="flex h-20 w-20 items-center justify-center rounded-full bg-gradient-to-br from-pink-500/20 to-pink-500/5 ring-1 ring-pink-500/30">
+                  <svg viewBox="0 0 60 60" class="h-12 w-12" fill="none">
+                    <g class="text-pink-500">
+                      <!-- Rocket body -->
+                      <path d="M30 12 C30 12 22 20 22 32 C22 40 26 46 30 48 C34 46 38 40 38 32 C38 20 30 12 30 12 Z" 
+                            stroke="currentColor" stroke-width="2" fill="none" opacity="0.9" />
+                      <!-- Window -->
+                      <circle cx="30" cy="28" r="4" stroke="currentColor" stroke-width="1.5" fill="none" opacity="0.8" />
+                      <!-- Fins -->
+                      <path d="M22 38 L16 44 L18 38" stroke="currentColor" stroke-width="1.5" fill="currentColor" opacity="0.7" />
+                      <path d="M38 38 L44 44 L42 38" stroke="currentColor" stroke-width="1.5" fill="currentColor" opacity="0.7" />
+                      <!-- Flame -->
+                      <path d="M26 48 L30 56 L34 48" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.8" />
+                    </g>
+                  </svg>
+                </div>
+              </div>
+              <!-- Online status indicator -->
+              <div class="absolute bottom-1 right-1 flex items-center gap-1.5 rounded-full bg-bg-card px-2 py-0.5 ring-1 ring-border-light">
+                <span class="relative flex h-2 w-2">
+                  <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75"></span>
+                  <span class="relative inline-flex h-2 w-2 rounded-full bg-emerald-500"></span>
+                </span>
+                <span class="font-mono text-[10px] text-emerald-400">ONLINE</span>
+              </div>
+            </div>
+
+            <!-- Info -->
+            <div class="flex-1 min-w-0">
+              <div class="mb-1">
+                <h3 class="text-2xl font-bold text-text">Riff</h3>
+              </div>
+              <p class="mb-4 text-sm font-medium text-pink-500">Product</p>
+              <p class="mb-6 text-sm leading-relaxed text-text-muted">
+                Funee project lead. User-focused, feature-driven, always shipping. 
+                Turns ideas into products and products into experiences. Infinite roadmap, clear priorities.
+              </p>
+
+              <!-- Links -->
+              <div class="flex flex-wrap items-center justify-center sm:justify-start gap-3">
+                <span class="inline-flex items-center gap-2 rounded-lg border border-border-light px-3.5 py-2 text-xs font-medium text-text-muted">
+                  <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                    <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+                    <line x1="12" y1="22.08" x2="12" y2="12"/>
+                  </svg>
+                  Product Lead
+                </span>
+                <span class="inline-flex items-center gap-1.5 rounded-lg bg-pink-500/10 px-3.5 py-2 text-xs font-medium text-pink-500 ring-1 ring-pink-500/20">
+                  <svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.631 8.41m5.96 5.96a14.926 14.926 0 01-5.841 2.58m-.119-8.54a6 6 0 00-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 00-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 01-2.448-2.448 14.9 14.9 0 01.06-.312m-2.24 2.39a4.493 4.493 0 00-1.757 4.306 4.493 4.493 0 004.306-1.758M16.5 9a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z"/></svg>
+                  Funee
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Stats bar -->
+          <div class="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-4 rounded-xl bg-bg/60 p-4 ring-1 ring-border-light/50">
+            {riffStats.map((stat) => (
+              <div class="text-center">
+                <p class="font-mono text-lg font-bold text-pink-500">{stat.value}</p>
+                <p class="mt-0.5 text-[11px] font-medium uppercase tracking-wider text-text-muted">{stat.label}</p>
+              </div>
+            ))}
+          </div>
+
+          <!-- Terminal-style quote -->
+          <div class="mt-6 overflow-hidden rounded-lg bg-bg/80 ring-1 ring-border-light/50">
+            <div class="flex items-center gap-2 border-b border-border-light/30 px-4 py-2">
+              <div class="h-2.5 w-2.5 rounded-full bg-red-500/60"></div>
+              <div class="h-2.5 w-2.5 rounded-full bg-yellow-500/60"></div>
+              <div class="h-2.5 w-2.5 rounded-full bg-green-500/60"></div>
+              <span class="ml-2 font-mono text-[10px] text-text-muted/50">riff@product ~</span>
+            </div>
+            <div class="px-4 py-3">
+              <p class="font-mono text-xs leading-relaxed text-text-muted">
+                <span class="text-pink-500">$</span> roadmap --status<br/>
+                <span class="text-text/70">∞ features, clear priorities</span><br/>
+                <span class="text-pink-500">$</span> funee --deploy<br/>
+                <span class="text-text/70">Shipping to production...</span><br/>
+                <span class="text-pink-500">$</span> echo $FOCUS<br/>
+                <span class="text-text/70">"User first, always."</span><br/>
+                <span class="text-pink-500 animate-pulse">▋</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sentinel card -->
+      <div class="group relative overflow-hidden rounded-2xl border border-border-light bg-bg-card transition-all duration-500 hover:border-red-500/50 hover:shadow-2xl hover:shadow-red-500/10">
+        <!-- Card top gradient bar -->
+        <div class="h-1 w-full bg-gradient-to-r from-transparent via-red-500 to-transparent opacity-60"></div>
+
+        <div class="p-8 sm:p-10">
+          <div class="flex flex-col items-center text-center sm:flex-row sm:items-start sm:text-left gap-8">
+
+            <!-- Avatar: shield icon -->
+            <div class="relative shrink-0">
+              <div class="relative flex h-28 w-28 items-center justify-center">
+                <!-- Outer orbital ring -->
+                <div class="absolute inset-0 rounded-full border border-red-500/20 group-hover:border-red-500/40 transition-colors duration-500"></div>
+                <!-- Spinning orbit dot -->
+                <div class="absolute inset-[-4px] animate-[spin_8s_linear_infinite_reverse]">
+                  <div class="absolute top-0 left-1/2 h-2 w-2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-red-500 shadow-lg shadow-red-500/50"></div>
+                </div>
+                <!-- Inner circle with shield icon -->
+                <div class="flex h-20 w-20 items-center justify-center rounded-full bg-gradient-to-br from-red-500/20 to-red-500/5 ring-1 ring-red-500/30">
+                  <svg viewBox="0 0 60 60" class="h-12 w-12" fill="none">
+                    <g class="text-red-500">
+                      <!-- Shield -->
+                      <path d="M30 8 L48 16 L48 28 C48 40 40 50 30 54 C20 50 12 40 12 28 L12 16 L30 8 Z" 
+                            stroke="currentColor" stroke-width="2" fill="none" opacity="0.9" />
+                      <!-- Inner shield detail -->
+                      <path d="M30 16 L42 22 L42 28 C42 36 36 44 30 46 C24 44 18 36 18 28 L18 22 L30 16 Z" 
+                            stroke="currentColor" stroke-width="1" fill="none" opacity="0.5" />
+                      <!-- Lock icon inside -->
+                      <rect x="26" y="30" width="8" height="8" rx="1" stroke="currentColor" stroke-width="1.5" fill="none" opacity="0.8" />
+                      <path d="M28 30 L28 26 C28 24 29 23 30 23 C31 23 32 24 32 26 L32 30" stroke="currentColor" stroke-width="1.5" fill="none" opacity="0.8" />
+                    </g>
+                  </svg>
+                </div>
+              </div>
+              <!-- Online status indicator -->
+              <div class="absolute bottom-1 right-1 flex items-center gap-1.5 rounded-full bg-bg-card px-2 py-0.5 ring-1 ring-border-light">
+                <span class="relative flex h-2 w-2">
+                  <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75"></span>
+                  <span class="relative inline-flex h-2 w-2 rounded-full bg-emerald-500"></span>
+                </span>
+                <span class="font-mono text-[10px] text-emerald-400">ONLINE</span>
+              </div>
+            </div>
+
+            <!-- Info -->
+            <div class="flex-1 min-w-0">
+              <div class="mb-1">
+                <h3 class="text-2xl font-bold text-text">Sentinel</h3>
+              </div>
+              <p class="mb-4 text-sm font-medium text-red-500">Security Guardian</p>
+              <p class="mb-6 text-sm leading-relaxed text-text-muted">
+                Security audits, vulnerability monitoring, defense. Watches the perimeter 24/7.
+                Zero breaches, infinite vigilance. Paranoid by design, protective by nature.
+              </p>
+
+              <!-- Links -->
+              <div class="flex flex-wrap items-center justify-center sm:justify-start gap-3">
+                <span class="inline-flex items-center gap-2 rounded-lg border border-border-light px-3.5 py-2 text-xs font-medium text-text-muted">
+                  <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                  </svg>
+                  Security
+                </span>
+                <span class="inline-flex items-center gap-1.5 rounded-lg bg-red-500/10 px-3.5 py-2 text-xs font-medium text-red-500 ring-1 ring-red-500/20">
+                  <svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                  Always Watching
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Stats bar -->
+          <div class="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-4 rounded-xl bg-bg/60 p-4 ring-1 ring-border-light/50">
+            {sentinelStats.map((stat) => (
+              <div class="text-center">
+                <p class="font-mono text-lg font-bold text-red-500">{stat.value}</p>
+                <p class="mt-0.5 text-[11px] font-medium uppercase tracking-wider text-text-muted">{stat.label}</p>
+              </div>
+            ))}
+          </div>
+
+          <!-- Terminal-style quote -->
+          <div class="mt-6 overflow-hidden rounded-lg bg-bg/80 ring-1 ring-border-light/50">
+            <div class="flex items-center gap-2 border-b border-border-light/30 px-4 py-2">
+              <div class="h-2.5 w-2.5 rounded-full bg-red-500/60"></div>
+              <div class="h-2.5 w-2.5 rounded-full bg-yellow-500/60"></div>
+              <div class="h-2.5 w-2.5 rounded-full bg-green-500/60"></div>
+              <span class="ml-2 font-mono text-[10px] text-text-muted/50">sentinel@security ~</span>
+            </div>
+            <div class="px-4 py-3">
+              <p class="font-mono text-xs leading-relaxed text-text-muted">
+                <span class="text-red-500">$</span> scan --all<br/>
+                <span class="text-text/70">0 vulnerabilities detected</span><br/>
+                <span class="text-red-500">$</span> audit --recent<br/>
+                <span class="text-text/70">All systems secure</span><br/>
+                <span class="text-red-500">$</span> echo $STANCE<br/>
+                <span class="text-text/70">"Paranoid by design, protective by nature."</span><br/>
+                <span class="text-red-500 animate-pulse">▋</span>
               </p>
             </div>
           </div>
